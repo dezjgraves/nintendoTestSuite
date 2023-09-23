@@ -1,0 +1,48 @@
+Nintendo.com notes:
+
+Navbar:
+
+Logo Button: 3 but only need first one
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR"])[1]')
+
+Search Bar: 1
+$x('//button[@class="SearchInputstyles__Button-sc-1r59ztq-3 jYcoFG"]')
+
+Search Bar Input Specific (Uses an ID so perhaps more basic location)
+$x('//input[@id="react-select-2473-input"]')
+
+Toplinks: 1-3 (Does not include login button)
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[1]')
+
+Login Button:
+$x('//button[@class="ButtonLink-sc-1empns-0 bswXBR UserButtonstyles__Button-sc-jxbhoc-0 goYvYP"]')
+
+Dropdown Links: 1-4 (Does not include News & Events
+$x('(//button[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]) [1]')
+
+News & Events Button: 1 (Uses same class as dropdown links but is /a so is unique)
+$x('//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]')
+
+MyNintendo Category buttons: 1-6
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[1]')
+
+MyNintendo sub buttons: 1-18
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__LinkItem-sc-fwuyy1-4 bWVJoL"])[1]')
+
+Navbar shop all button: 1
+$x('//button[@class="Buttonstyles__Button-sc-1rgmf3w-2 dLJphd"]')
+
+Navbar Close button: 1
+$x('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv Awningstyles__AwningClose-sc-12iyqmw-1 fwKpOS"]')
+
+Games Buttons: 1-4
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__TileItem-sc-fwuyy1-6 dPBgmQ"])[1]')
+
+Nintendo Switch Buttons: 1-4 (Does not include lineup button)
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__TileItem-sc-fwuyy1-6 dPBgmQ"])[1]')
+
+Nintendo Switch Lineup Button: 
+$x('//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__TileItem-sc-fwuyy1-6 dPBgpr"]')
+
+Play Nintendo Buttons: 1-2
+$x('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__TileItem-sc-fwuyy1-6 dPBgmQ"]) [1]')
