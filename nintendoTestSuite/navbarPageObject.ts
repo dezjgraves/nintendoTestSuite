@@ -10,7 +10,7 @@ export class nintendoWeb extends BasePage {
     searchClose: By = By.xpath('(//button[@class="SearchFlyoverstyles__Close-sc-14rqey7-6 bMRZPH"])[1]');
     //Top Links
     supportBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[1]');
-    wishBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[1]');
+    wishBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[2]');
     cartBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[2]');
     loginBtn: By = By.xpath('//button[@class="ButtonLink-sc-1empns-0 bswXBR UserButtonstyles__Button-sc-jxbhoc-0 goYvYP"]');
     loginClose: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv DrawerHeaderstyles__CloseButton-sc-q0gw4c-2 jPtbyp"]');
@@ -25,7 +25,13 @@ export class nintendoWeb extends BasePage {
     closeDrop2: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv"]');
     closeDrop3: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv"]');
 
-    
+    //dropdown SubCategories
+    subGames: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[1]')
+    subHard: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[2]')
+    subMerch: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[3]')
+    subExclusives: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[4]')
+    subCharacters: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[5]')
+    subDeals: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__HeadingLink-sc-fwuyy1-11 fmrMnO"])[6]')    
     constructor () {
         super ({url: "https://www.nintendo.com/error/"})
     };
