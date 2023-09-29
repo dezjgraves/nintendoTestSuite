@@ -6,20 +6,29 @@ export class nintendoWeb extends BasePage {
         homeBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR"])[1]');
         //Search Bar
         searchBar: By = By.xpath('//button[@class="SearchInputstyles__Button-sc-1r59ztq-3 jYcoFG"]');
+        searchInput: By = By.xpath('//input[@name="q"]');
         searchDrop: By = By.xpath('(//div[@class="SearchInputstyles__Select-sc-1r59ztq-7 bsKuBq css-b62m3t-container"])[1]');
+        searchCategory: By = By.xpath('//div[@class="SearchBarSelectstyles__ControlReplacement-sc-190tvj8-5 gelFGY css-ds8zu2-control');
         searchClose: By = By.xpath('(//button[@class="SearchFlyoverstyles__Close-sc-14rqey7-6 bMRZPH"])[1]');
+        searchResult: By = By.xpath('//div[@class="Layout__Main-sc-1kgevev-6 htKanS"]');
         //Top Links
         supportBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[1]');
+        cartBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[3]');
         wishBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[2]');
-        cartBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR Topstyles__TopLink-sc-14wlync-2 gXUCck"])[2]');
+        cartImg: By = By.xpath('//span[@class="Spacerstyles__StyledSpacer-sc-1su040v-0 dANojj"]')
         loginBtn: By = By.xpath('//button[@class="ButtonLink-sc-1empns-0 bswXBR UserButtonstyles__Button-sc-jxbhoc-0 goYvYP"]');
+        loginBox: By = By.xpath('//div[@class="Menustyles__Scrolling-sc-1q588nn-1 ehqGDL"]')
         loginClose: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv DrawerHeaderstyles__CloseButton-sc-q0gw4c-2 jPtbyp"]');
 
         //Dropdown Links
         storeDrop: By = By.xpath('(//button[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]) [1]');
+        storeBox: By = By.xpath('//div[@class="DropdownMenustyles__Wrap-sc-fwuyy1-1 bBUEeC"]');
         gamesDrop: By = By.xpath('(//button[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]) [2]');
+        gamesBox: By = By.id('GAMES');
         switchDrop: By = By.xpath('(//button[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]) [3]');
+        switchBox: By = By.id('NINTENDO_SWITCH');
         playDrop: By = By.xpath('(//button[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]) [4]');
+        playBox: By = By.id('PLAY_NINTENDO');
         closeDrop: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv Awningstyles__AwningClose-sc-12iyqmw-1 fwKpOS"]');
         newsDrop: By = By.xpath('//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownButtonstyles__Button-sc-m78d24-0 jZacJP"]');
         closeDrop2: By = By.xpath('//button[@class="CloseButtonstyles__CloseButton-sc-auhxh6-0 eEsMrv"]');
@@ -53,6 +62,8 @@ export class nintendoWeb extends BasePage {
         storeLink17: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__LinkItem-sc-fwuyy1-4 bWVJoL"])[17]');
         storeLink18: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR DropdownMenustyles__LinkItem-sc-fwuyy1-4 bWVJoL"])[18]');
 
+        //Hero Slider
+        heroSlider: By = By.xpath('//div[@class="AutoplayCarouselstyles__Constrained-sc-1jblu2z-0 cOBvmf"]');
     
     constructor () {
         super ({url: "https://www.nintendo.com/switch/online/"})
@@ -101,19 +112,6 @@ async tabSwitch2() {
 async openPage(){
     await this.navigate();
     await this.driver.manage().window().maximize();
-}
-
-async homeButtonClick(){
-    
-    await this.driver.wait(until.elementIsVisible(this.driver.findElement(this.homeBtn)))
-    await this.driver.findElement(this.homeBtn);
-    await this.click(this.homeBtn);
-    let homeUrl = await this.driver.getCurrentUrl();
-    return homeUrl;
-    const urlAfterClick = await this.homeButtonClick();
-    expect(urlAfterClick).toContain("https://www.nintendo.com/");
-    await urlAfterClick, (e) => {
-    if (e) console.log(e);
-    else console.log('Successfully clicked homepage');
-    };
 }};
+
+

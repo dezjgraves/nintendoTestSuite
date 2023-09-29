@@ -10,40 +10,8 @@ describe("Testing all functions of the Navbar", () => {
         nintendo.driver.quit();
     })
     test ('Click Homepage', async () =>{
-        nintendo.homeButtonClick
          //maximize window
-         await nintendo.navigate();
-         await nintendo.driver.manage().window().maximize();
-         await nintendo.driver.findElement(nintendo.homeBtn);
-         await nintendo.click(nintendo.homeBtn);
-
-         await nintendo.driver.findElement(nintendo.searchBar);
-         await nintendo.click(nintendo.searchBar);
-         await nintendo.driver.findElement(nintendo.searchClose);
-         await nintendo.click(nintendo.searchClose);
-
-         await nintendo.driver.findElement(nintendo.searchDrop);
-         await nintendo.click(nintendo.searchDrop);
-
-         await nintendo.driver.findElement(nintendo.supportBtn);
-         await nintendo.click(nintendo.supportBtn);
-         await nintendo.tabSwitch();
-         await nintendo.driver.sleep(1500);
-
-         await nintendo.driver.findElement(nintendo.wishBtn);
-         await nintendo.click(nintendo.wishBtn);
-
-         await nintendo.driver.findElement(nintendo.cartBtn);
-         await nintendo.click(nintendo.cartBtn);
-         await nintendo.driver.sleep(1500);
-         await nintendo.tabSwitch2();
-
-         await nintendo.driver.findElement(nintendo.loginBtn);
-         await nintendo.click(nintendo.loginBtn);
-
-         await nintendo.driver.findElement(nintendo.loginClose);
-         await nintendo.click(nintendo.loginClose);
-
+         
          await nintendo.driver.findElement(nintendo.storeDrop);
          await nintendo.click(nintendo.storeDrop);
          // await nintendo.driver.sleep(1500);
@@ -242,10 +210,9 @@ describe("Testing all functions of the Navbar", () => {
          await nintendo.click(nintendo.storeLink18);
 
  });
-    })
-
+   
     
 
 
            
-    
+});
