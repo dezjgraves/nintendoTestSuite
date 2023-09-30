@@ -64,12 +64,21 @@ export class nintendoWeb extends BasePage {
 
         //Hero Slider
         heroSlider: By = By.xpath('//div[@class="AutoplayCarouselstyles__Constrained-sc-1jblu2z-0 cOBvmf"]');
+
+        //store container
+        storeFilter: By = By.xpath('(//div[@class="constrained-sc-1d4m5hk-0 cTFArn"])[2]');
     
     constructor () {
         super ({url: "https://www.nintendo.com/switch/online/"})
     };
 
     /////////////Methods here
+
+    async storeLinks() {
+        await this.getElement(this.storeDrop);
+        await this.click(this.storeDrop);
+        await this.getElement(this.storeBox);
+    }
 
 async tabSwitch() {
     const myTabs = await this.driver.getAllWindowHandles();
@@ -113,5 +122,7 @@ async openPage(){
     await this.navigate();
     await this.driver.manage().window().maximize();
 }};
+
+
 
 
