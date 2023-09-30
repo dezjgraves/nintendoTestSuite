@@ -1,7 +1,7 @@
 import {By, until} from 'selenium-webdriver';
 import {BasePage} from './basePage';
 export class nintendoWeb extends BasePage {
-    homeBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR"])[1]');
+    homeBtn: By = By.xpath('(//a[@class="ButtonLink-sc-1empns-0 bswXBR"])[]1');
     breadCrumb: By = By.xpath('//ol[@class="Breadcrumbsstyles__StyledOl-sc-sjz6t7-1 izlbaI"]');
     mainHome: By = By.id('main');
 

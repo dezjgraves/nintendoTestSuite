@@ -38,10 +38,10 @@ describe("Testing all functions of the Navbar", () => {
         await nintendo.getElement(nintendo.searchBar);
         await nintendo.click(nintendo.searchBar);
 
-        await nintendo.setInput(nintendo.searchInput, `elder scrolls\n`);
+        await nintendo.setInput(nintendo.searchInput, `mario\n`);
 
         let results = await nintendo.getText(nintendo.searchResult);
-        expect(results).toContain("Skyrim Anniversary");
+        expect(results).toContain("Super Mario");
 
         fs.appendFile(`${__dirname}/testResults.txt`, results, (e) => {
             if (e) console.log(e);
